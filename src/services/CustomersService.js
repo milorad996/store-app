@@ -7,16 +7,20 @@ class CustomersService {
 
     constructor() {
         this.customers = [
-            { firstName: 'Milan', lastName: 'Milic' },
-            { firstName: 'Ana', lastName: 'Anic' },
-            { firstName: 'Pero', lastName: 'Peric' },
-            { firstName: 'Jelena', lastName: 'Jelic' },
-            { firstName: 'Nenad', lastName: 'Nedic' }
+            { firstName: 'Milan', lastName: 'Milic', listOfProducts: ['car', 'hat', 'cup'] },
+            { firstName: 'Ana', lastName: 'Anic', listOfProducts: ['book', 'notebook', 'cup'] },
+            { firstName: 'Pero', lastName: 'Peric', listOfProducts: ['computer', 'phone', 'mouse'] },
+            { firstName: 'Jelena', lastName: 'Jelic', listOfProducts: ['t-shirt', 'dress', 'lipstick'] },
+            { firstName: 'Nenad', lastName: 'Nedic', listOfProducts: ['wallet', 'belt', 'trousers'] }
         ]
 
     }
     addCustomers(newCustomer) {
         this.customers.push(newCustomer)
+    }
+
+    removeCustomer(index) {
+        this.customers = [...this.customers.slice(0, index), ...this.customers(index + 1)]
     }
 
 

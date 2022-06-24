@@ -1,11 +1,14 @@
 import { useState } from "react";
 import CustomersService from "../services/CustomersService";
-
+import { BrowserRouter as Route, Switch, useRouteMatch, Link } from 'react-router-dom';
+import LatestPurchases from "../pagesComponents/Latest Purchases";
 
 
 
 
 function AppCustomers() {
+
+    let match = useRouteMatch();
 
     const [newCustomer, setNewCustomer] = useState({
         firstName: '',
@@ -63,6 +66,10 @@ function AppCustomers() {
                         <li key={index}>{customer.firstName + " " + customer.lastName} {" "}
 
                             <button onClick={() => handleRemoveCustomer(index)}>Remove</button>
+
+
+                            <Link key={index} to='/customers/:id'>Latest Purchases</Link>
+
                         </li>
 
 
@@ -70,8 +77,14 @@ function AppCustomers() {
                 ))}
 
             </ul>
-
+            <Switch>
+                <Route path='/customers/:id' exact>
+                    <LatestPurchases />
+                </Route>
+            </Switch>
         </div>
+
+
     )
 }
 

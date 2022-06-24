@@ -7,18 +7,20 @@ import React, { useState } from 'react';
 import AppCustomers from './components/AppCustomers';
 import AppProducts from './components/AppProducts';
 import './App.css';
+import LatestPurchases from './pagesComponents/Latest Purchases';
 
 function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+          <ul class="navbar-nav me-auto mb-10 mb-lg-2">
 
-            <li>
+            <li class="nav-item">
               <Link to="/customers">Customers</Link>
             </li>
-            <li>
+
+            <li class="nav-item">
               <Link to="/products">Products</Link>
             </li>
           </ul>
@@ -32,6 +34,10 @@ function App() {
           <Route path="/products" exact>
             <AppProducts />
           </Route>
+          <Route path="/customers/:id" exact>
+            <LatestPurchases />
+          </Route>
+
 
         </Switch>
       </div>
