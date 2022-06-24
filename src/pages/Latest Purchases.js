@@ -1,6 +1,6 @@
 
 import { useParams } from 'react-router-dom';
-import AppCustomers from '../pages/AppCustomers';
+import AppCustomers from './AppCustomers';
 import CustomersService from '../services/CustomersService';
 
 

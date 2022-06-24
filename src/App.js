@@ -7,7 +7,7 @@ import React, { useState } from 'react';
 import AppCustomers from './pages/AppCustomers';
 import AppProducts from './pages/AppProducts';
 import './App.css';
-import LatestPurchases from './components/Latest Purchases';
+import LatestPurchases from './pages/Latest Purchases';
 
 function App() {
   return (

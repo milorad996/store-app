@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CustomersService from "../services/CustomersService";
 import { BrowserRouter as Route, Switch, useRouteMatch, Link } from 'react-router-dom';
-import LatestPurchases from "../components/Latest Purchases";
+import LatestPurchases from "./Latest Purchases";
 
 
 

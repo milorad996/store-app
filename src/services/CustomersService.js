@@ -19,6 +19,8 @@ class CustomersService {
         this.customers.push(newCustomer)
     }
 
+
+
     removeCustomer(index) {
         this.customers = [...this.customers.slice(0, index), ...this.customers(index + 1)]
     }

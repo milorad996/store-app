@@ -1,6 +1,21 @@
 class ProductsService {
+
+
+    constructor() {
+        this.products = [
+            { name: 'tv' },
+            { name: 'telefon' },
+            { name: 'olovka' },
+            { name: 'kamera' },
+            { name: 'casa' },
+            { name: 'solja' },
+            { name: 'stolica' },
+            { name: 'slika' }
+
+        ]
+    }
     getAll() {
-        // send request to get all videos from server through http client
+        return this.products
     }
     get(id) {
         // send request to get video with id from server through http client
