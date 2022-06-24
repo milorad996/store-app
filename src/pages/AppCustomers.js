@@ -1,7 +1,7 @@
 import { useState } from "react";
 import CustomersService from "../services/CustomersService";
 import { BrowserRouter as Route, Switch, useRouteMatch, Link } from 'react-router-dom';
-import LatestPurchases from "../pagesComponents/Latest Purchases";
+import LatestPurchases from "../components/Latest Purchases";
 
 
 
@@ -19,6 +19,7 @@ function AppCustomers() {
 
 
     const handleRemoveCustomer = (index) => {
+        CustomersService.removeCustomer(index);
         setCustomers([...customers.slice(0, index), ...customers.slice(index + 1)])
     }
 
@@ -37,9 +38,10 @@ function AppCustomers() {
 
     const addCustomer = (e) => {
         e.preventDefault();
+        CustomersService.addCustomers(newCustomer);
+
         setNewCustomer([...customers, newCustomer])
 
-        CustomersService.addCustomers(newCustomer);
         setNewCustomer({
             firstName: '',
             lastName: '',

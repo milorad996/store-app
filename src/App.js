@@ -4,10 +4,10 @@ import {
   Route, Link
 } from 'react-router-dom';
 import React, { useState } from 'react';
-import AppCustomers from './components/AppCustomers';
-import AppProducts from './components/AppProducts';
+import AppCustomers from './pages/AppCustomers';
+import AppProducts from './pages/AppProducts';
 import './App.css';
-import LatestPurchases from './pagesComponents/Latest Purchases';
+import LatestPurchases from './components/Latest Purchases';
 
 function App() {
   return (
