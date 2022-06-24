@@ -5,12 +5,6 @@ import { useState } from "react";
 class CustomersService {
 
 
-    const[newCustomer, setNewCustomer] = useState({
-        firstName: '',
-        lastName: '',
-
-    });
-
     constructor() {
         this.customers = [
             { firstName: 'Milan', lastName: 'Milic' },
